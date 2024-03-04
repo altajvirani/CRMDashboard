@@ -10,8 +10,7 @@ interface MenuOptionsProps {
 }
 
 interface CustomButtonProps {
-  appearance: string;
-  // icon: React.ReactNode | null;
+  theme: string | null;
   icon: JSX.Element | null;
   text: string | null;
   menuOptions: MenuOptionsProps | null;
@@ -19,4 +18,9 @@ interface CustomButtonProps {
   handler: ((...args: any) => any) | null;
 }
 
-export type { MenuOptionsProps, CustomButtonProps };
+interface ChipProps {
+  theme: string | null;
+  text: string;
+}
+
+export type { MenuOptionsProps, CustomButtonProps, ChipProps };
