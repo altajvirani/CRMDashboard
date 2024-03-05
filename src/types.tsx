@@ -23,4 +23,19 @@ interface ChipProps {
   text: string;
 }
 
-export type { MenuOptionsProps, CustomButtonProps, ChipProps };
+interface CustomTableColProps {
+  alignment: string | null;
+  checkbox: JSX.Element | null;
+  contentType: string | null;
+  isIterable: boolean;
+  content: any | any[] | null;
+  actionButton: JSX.Element | null;
+  actionButtonPosition: string | null;
+}
+
+export type {
+  MenuOptionsProps,
+  CustomButtonProps,
+  ChipProps,
+  CustomTableColProps,
+};

@@ -5,7 +5,6 @@ export default function SettingsIcon({ styles }: { styles: string }) {
       width="169.517"
       height="172.671"
       viewBox="0 0 169.517 172.671"
-      // className="w-[1.2rem] h-[1.2rem] m-auto">
       className={styles}>
       <g
         id="Group_1"

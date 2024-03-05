@@ -1,4 +1,4 @@
-import { ChipProps } from "../types";
+import { ChipProps } from "../../types";
 
 export default function Chip(props: ChipProps) {
   return (
@@ -16,9 +16,11 @@ export default function Chip(props: ChipProps) {
               ? "bg-white border border-slate-400 text-slate-700"
               : props.theme === "dark"
               ? "bg-slate-700 text-white"
-              : "bg-gray-200 border border-gray-400 text-gray-500"
-            : "bg-gray-200 border border-gray-400 text-gray-500"
-        } px-[0.4rem] rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center`}>
+              : props.theme === "ghost"
+              ? "bg-gray-200 border border-gray-400 text-gray-500"
+              : ""
+            : ""
+        } px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center cursor-pointer transition-transform hover:scale-105 active:scale-95`}>
         {props.text}
       </div>
     </>

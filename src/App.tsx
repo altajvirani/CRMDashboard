@@ -5,36 +5,33 @@ import "./App.css";
 import SearchIcon from "./assets/SearchIcon";
 import MessagesIcon from "./assets/MessagesIcon";
 import SettingsIcon from "./assets/SettingsIcon";
-import CustomButton from "./components/CustomButton";
+import CustomButton from "./components/custom-ui/CustomButton";
 import { useRef } from "react";
 import GridIcon from "./assets/GridIcon";
 import SortIcon from "./assets/SortIcon";
 import FilterIcon from "./assets/FilterIcon";
 import AddIcon from "./assets/AddIcon";
 import ImportExportIcon from "./assets/ImportExportIcon";
-import Chip from "./components/Chip";
+import Chip from "./components/custom-ui/Chip";
 import ArchiveIcon from "./assets/ArchiveIcon";
 import DeleteIcon from "./assets/DeleteIcon";
 import CancelIcon from "./assets/CancelIcon";
+import CustomTable from "./components/custom-ui/CustomTable/CustomTable";
+import SideNavbar from "./components/custom-ui/SideNavbar";
 
 function App() {
   const searchBarRef = useRef<HTMLInputElement>(null);
 
   return (
     <div className="w-full h-full flex text-slate-700">
-      <div className="bg-white z-10 w-full sm:w-full md:w-[20rem] h-full fixed top-0 flex flex-col px-[0.75rem] py-[0.75rem] ">
-        <div className="w-full h-full px-[1rem] py-[0.6rem] border border-slate-300 rounded-xl">
-          <div>hello</div>
-          <div>hi</div>
-        </div>
-      </div>
-      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100vh]">
-        <div className="w-full h-full border border-slate-300 rounded-xl relative">
-          <div className="w-full px-[1.3rem] py-[1rem] flex flex-row items-center justify-between gap-[0.6rem] border-b border-slate-300 ">
+      <SideNavbar />
+      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100vh] relative">
+        <div className="w-full max-h-full border border-slate-300 rounded-xl overflow-y-scroll">
+          <div className="w-full px-[1.3rem] py-[1rem] flex items-center justify-between gap-[0.6rem] border-b border-slate-300 ">
             <span className="font-qanelassemibold text-[1.2rem] h-full flex align-center">
               Products
             </span>
-            <div className="flex flex-row gap-[0.6rem]">
+            <div className="flex gap-[0.6rem]">
               <div>
                 <label className="w-[14rem] h-[2rem] outline-none border border-slate-300 rounded-[0.6rem] shadow-[0rem_0rem_0.5rem_-0.1rem_rgb(98,107,128,0.2)] flex items-center px-[0.5rem] py-[0.7rem]">
                   <SearchIcon styles="w-[0.9rem] h-[0.9rem]" />
@@ -48,7 +45,12 @@ function App() {
               </div>
               <CustomButton
                 theme={null}
-                icon={<MessagesIcon styles="w-[0.9rem] h-[0.9rem] m-auto" />}
+                icon={
+                  <MessagesIcon
+                    styles="w-[0.9rem] h-[0.9rem] m-auto"
+                    theme="primary"
+                  />
+                }
                 text={null}
                 menuOptions={null}
                 handler={null}
@@ -65,7 +67,7 @@ function App() {
             </div>
           </div>
           <div className="w-full px-[1.3rem] py-[1rem] flex flex-col lg:flex-row gap-[0.6rem] items-center justify-between border-b border-slate-300">
-            <div className="w-full lg:w-auto flex flex-row gap-[0.6rem]">
+            <div className="w-full lg:w-auto flex gap-[0.6rem]">
               <CustomButton
                 theme={null}
                 icon={<GridIcon styles="w-[0.8rem] h-[0.8rem] m-auto" />}
@@ -107,7 +109,7 @@ function App() {
                 handlerParams={null}
               />
             </div>
-            <div className="w-full lg:w-auto flex flex-row gap-[0.6rem]">
+            <div className="w-full lg:w-auto flex gap-[0.6rem]">
               <CustomButton
                 theme={null}
                 icon={
@@ -133,12 +135,17 @@ function App() {
               />
             </div>
           </div>
-          <div className="absolute bottom-[0.8rem] left-0 right-0 m-auto w-max h-max border border-slate-300 rounded-xl px-[0.8rem] py-[0.8rem] shadow-[0rem_0rem_1rem_-0.2rem_rgb(98,107,128,0.3)] flex flex-row items-center gap-[1.3rem]">
-            <div className="flex flex-row items-center justify-center  gap-[0.35rem]">
+
+          <div className="overflow-auto">
+            <CustomTable />
+          </div>
+
+          <div className="absolute bg-white bottom-[1.6rem] left-0 right-0 m-auto w-max h-max border border-slate-300 rounded-xl px-[0.8rem] py-[0.8rem] shadow-[0rem_0rem_1rem_-0.2rem_rgb(98,107,128,0.3)] flex items-center gap-[1.3rem]">
+            <div className="flex items-center justify-center  gap-[0.35rem]">
               <Chip theme="dark" text="3" />
               <span>selected</span>
             </div>
-            <div className="flex flex-row items-center justify-center gap-[0.6rem]">
+            <div className="flex items-center justify-center gap-[0.6rem]">
               <CustomButton
                 theme={null}
                 icon={

@@ -17,4 +17,8 @@ module.exports = {
       qanelasblack: ["Qanelas-Black", "sans-serif"],
     },
   },
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"],
+  },
 };
