@@ -20,8 +20,12 @@ export default function Chip(props: ChipProps) {
               ? "bg-gray-200 border border-gray-400 text-gray-500"
               : ""
             : ""
-        } px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center cursor-pointer transition-transform hover:scale-105 active:scale-95`}>
-        {props.text}
+        } px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center cursor-pointer ${
+          props.isClickable
+            ? "transition-transform hover:scale-105 active:scale-95"
+            : ""
+        }`}>
+        {props.content}
       </div>
     </>
   );

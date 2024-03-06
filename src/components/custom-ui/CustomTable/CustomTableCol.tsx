@@ -60,7 +60,7 @@ export default function CustomTableCol({
                 <span
                   className={`flex pr-[0.6rem] justify-${
                     prop.alignment !== null ? prop.alignment : "start"
-                  }`}>
+                  } inline-block min-w-max`}>
                   {prop.content}
                 </span>
                 {prop.actionButton !== null &&

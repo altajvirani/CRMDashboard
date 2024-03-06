@@ -10,22 +10,14 @@ const CustomTable = () => {
   const tableHeaderProps: CustomTableColProps[] = [
     {
       alignment: "start",
-      checkbox: (
-        <input
-          type="checkbox"
-          className="checkbox checkbox-sm rounded-[0.35rem] checked:border-none border-slate-300"
-        />
-      ),
       contentType: null,
       isIterable: false,
       content: null,
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: null,
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Brands",
@@ -42,61 +34,49 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "end",
-      // minWidth: "13rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Description",
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "13rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Members",
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "10rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Categories",
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "10rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Tags",
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "10rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Next meeting",
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "8rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: null,
       isIterable: false,
       content: null,
@@ -111,24 +91,20 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "center",
-      // minWidth: null,
     },
   ];
 
   const tableRowProps: CustomTableColProps[] = [
     {
       alignment: null,
-      checkbox: null,
       contentType: null,
       isIterable: false,
       content: null,
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: null,
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "avatar-with-name",
       isIterable: true,
       content: [
@@ -155,21 +131,17 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "end",
-      // minWidth: "13rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Develop a personalized fitness app",
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "13rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "avatars",
       isIterable: true,
       content: [
@@ -190,48 +162,46 @@ const CustomTable = () => {
       ],
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "13rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "chips",
       isIterable: true,
       content: [
-        <Chip theme="success" text={"E-Commerce"} />,
-        <Chip theme="danger" text={"B2B"} />,
+        <Chip theme="success" content="E-Commerce" isClickable={true} />,
+        <Chip theme="danger" content="B2B" isClickable={true} />,
       ],
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "10rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "chips",
       isIterable: true,
       content: [
-        <Chip theme="ghost" text={"#DigitalTransformation"} />,
-        <Chip theme="ghost" text={"#OnlineShopping"} />,
-        <Chip theme="ghost" text={"#BuySellOnline"} />,
+        <Chip
+          theme="ghost"
+          content="#DigitalTransformation"
+          isClickable={true}
+        />,
+        <Chip theme="ghost" content="#OnlineShopping" isClickable={true} />,
+        <Chip theme="ghost" content="#BuySellOnline" isClickable={true} />,
       ],
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "10rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "chips",
       isIterable: true,
-      content: [<Chip theme="success" text={"in 30 minutes"} />],
+      content: [
+        <Chip theme="success" content="in 30 minutes" isClickable={true} />,
+      ],
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: "10rem",
     },
     {
       alignment: "start",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Add calculation",
@@ -248,24 +218,33 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: null,
-      // minWidth: null,
     },
   ];
 
   const tableFooterProps: CustomTableColProps[] = [
     {
       alignment: null,
-      checkbox: null,
       contentType: null,
       isIterable: false,
       content: null,
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: null,
     },
     {
       alignment: "end",
-      checkbox: null,
+      contentType: "text",
+      isIterable: false,
+      content: [
+        <>
+          <Chip theme="transparent" content="10" isClickable={false} />
+          {`count`}
+        </>,
+      ],
+      actionButton: null,
+      actionButtonPosition: "start",
+    },
+    {
+      alignment: "end",
       contentType: "text",
       isIterable: false,
       content: "Add calculation",
@@ -282,11 +261,9 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "start",
-      // minWidth: "13rem",
     },
     {
       alignment: "end",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Add calculation",
@@ -303,11 +280,9 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "start",
-      // minWidth: "13rem",
     },
     {
       alignment: "end",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Add calculation",
@@ -324,11 +299,9 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "start",
-      // minWidth: "10rem",
     },
     {
       alignment: "end",
-      checkbox: null,
       contentType: "text",
       isIterable: false,
       content: "Add calculation",
@@ -345,48 +318,22 @@ const CustomTable = () => {
         />
       ),
       actionButtonPosition: "start",
-      // minWidth: "10rem",
-    },
-    {
-      alignment: "end",
-      checkbox: null,
-      contentType: "text",
-      isIterable: false,
-      content: "Add calculation",
-      actionButton: (
-        <CustomButton
-          theme="transparent"
-          icon={
-            <AddIcon styles={"w-[0.9rem] h-[0.9rem] m-auto"} theme={null} />
-          }
-          text={null}
-          menuOptions={null}
-          handlerParams={null}
-          handler={null}
-        />
-      ),
-      actionButtonPosition: "start",
-      // minWidth: "10rem",
     },
     {
       alignment: null,
-      checkbox: null,
       contentType: null,
       isIterable: false,
       content: null,
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: null,
     },
     {
       alignment: null,
-      checkbox: null,
       contentType: null,
       isIterable: false,
       content: null,
       actionButton: null,
       actionButtonPosition: null,
-      // minWidth: null,
     },
   ];
 
@@ -396,11 +343,6 @@ const CustomTable = () => {
         <CustomTableCol props={tableHeaderProps} />
       </th>
       <tbody className="w-full p-0">
-        <CustomTableCol props={tableRowProps} />
-        <CustomTableCol props={tableRowProps} />
-        <CustomTableCol props={tableRowProps} />
-        <CustomTableCol props={tableRowProps} />
-        <CustomTableCol props={tableRowProps} />
         <CustomTableCol props={tableRowProps} />
         <CustomTableCol props={tableRowProps} />
         <CustomTableCol props={tableRowProps} />

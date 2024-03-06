@@ -20,12 +20,12 @@ interface CustomButtonProps {
 
 interface ChipProps {
   theme: string | null;
-  text: string;
+  content: any;
+  isClickable: boolean;
 }
 
 interface CustomTableColProps {
   alignment: string | null;
-  checkbox: JSX.Element | null;
   contentType: string | null;
   isIterable: boolean;
   content: any | any[] | null;
@@ -33,9 +33,29 @@ interface CustomTableColProps {
   actionButtonPosition: string | null;
 }
 
+interface SideNavbarTabProps {
+  isClickable: boolean;
+  isSelected: boolean;
+  appearance: string | null;
+  topBorder: boolean;
+  start: JSX.Element | null;
+  text: string;
+  textSize: string | null;
+  textBold: boolean;
+  end: JSX.Element | null;
+}
+
+interface SideNavbarSectionProps {
+  type: string;
+  tabGap: string | null;
+  tabs: SideNavbarTabProps[];
+}
+
 export type {
   MenuOptionsProps,
   CustomButtonProps,
   ChipProps,
   CustomTableColProps,
+  SideNavbarTabProps,
+  SideNavbarSectionProps,
 };

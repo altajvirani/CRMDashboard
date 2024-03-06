@@ -17,7 +17,7 @@ import ArchiveIcon from "./assets/ArchiveIcon";
 import DeleteIcon from "./assets/DeleteIcon";
 import CancelIcon from "./assets/CancelIcon";
 import CustomTable from "./components/custom-ui/CustomTable/CustomTable";
-import SideNavbar from "./components/custom-ui/SideNavbar";
+import SideNavbar from "./components/custom-ui/SideNavbar/SideNavbar";
 
 function App() {
   const searchBarRef = useRef<HTMLInputElement>(null);
@@ -25,8 +25,8 @@ function App() {
   return (
     <div className="w-full h-full flex text-slate-700">
       <SideNavbar />
-      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100vh] relative">
-        <div className="w-full max-h-full border border-slate-300 rounded-xl overflow-y-scroll">
+      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100vh] overflow-y-auto">
+        <div className="w-full min-h-full relative overflow-hidden max-h-full border border-slate-300 rounded-xl">
           <div className="w-full px-[1.3rem] py-[1rem] flex items-center justify-between gap-[0.6rem] border-b border-slate-300 ">
             <span className="font-qanelassemibold text-[1.2rem] h-full flex align-center">
               Products
@@ -142,7 +142,7 @@ function App() {
 
           <div className="absolute bg-white bottom-[1.6rem] left-0 right-0 m-auto w-max h-max border border-slate-300 rounded-xl px-[0.8rem] py-[0.8rem] shadow-[0rem_0rem_1rem_-0.2rem_rgb(98,107,128,0.3)] flex items-center gap-[1.3rem]">
             <div className="flex items-center justify-center  gap-[0.35rem]">
-              <Chip theme="dark" text="3" />
+              <Chip theme="dark" content="3" isClickable={false} />
               <span>selected</span>
             </div>
             <div className="flex items-center justify-center gap-[0.6rem]">

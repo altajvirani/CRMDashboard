@@ -10,7 +10,7 @@ export default function Button(props: CustomButtonProps) {
       <button
         className={`${
           props.text !== null
-            ? "w-max px-[0.5rem] font-qanelasmedium"
+            ? "min-w-max px-[0.5rem] font-qanelasmedium"
             : "min-w-[2rem]"
         } ${
           props.theme === "danger"
