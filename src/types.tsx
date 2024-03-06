@@ -24,15 +24,6 @@ interface ChipProps {
   isClickable: boolean;
 }
 
-interface CustomTableColProps {
-  alignment: string | null;
-  contentType: string | null;
-  isIterable: boolean;
-  content: any | any[] | null;
-  actionButton: JSX.Element | null;
-  actionButtonPosition: string | null;
-}
-
 interface SideNavbarTabProps {
   isClickable: boolean;
   isSelected: boolean;
@@ -55,7 +46,6 @@ export type {
   MenuOptionsProps,
   CustomButtonProps,
   ChipProps,
-  CustomTableColProps,
   SideNavbarTabProps,
   SideNavbarSectionProps,
 };

@@ -136,9 +136,7 @@ function App() {
             </div>
           </div>
 
-          <div className="overflow-auto">
-            <CustomTable />
-          </div>
+          <CustomTable />
 
           <div className="absolute bg-white bottom-[1.6rem] left-0 right-0 m-auto w-max h-max border border-slate-300 rounded-xl px-[0.8rem] py-[0.8rem] shadow-[0rem_0rem_1rem_-0.2rem_rgb(98,107,128,0.3)] flex items-center gap-[1.3rem]">
             <div className="flex items-center justify-center  gap-[0.35rem]">

@@ -4,7 +4,7 @@
 
 import { CustomButtonProps } from "../../types";
 
-export default function Button(props: CustomButtonProps) {
+export default function CustomButton(props: CustomButtonProps) {
   return (
     <>
       <button

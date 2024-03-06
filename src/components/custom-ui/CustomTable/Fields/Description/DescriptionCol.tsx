@@ -1,9 +1,7 @@
-import React from 'react'
-
-const BrandCol = () => {
+export default function DescriptionCol() {
   return (
-    <div>BrandCol</div>
-  )
+    <td className="overflow-y-scroll no-scrollbar w-full h-full flex items-center justify-between border-r border-b border-slate-300 px-[1rem] py-[0.6rem] text-slate-700 font-qanelassemibold whitespace-nowrap">
+      <span>Develop a personalized fitness..</span>
+    </td>
+  );
 }
-
-export default BrandCol

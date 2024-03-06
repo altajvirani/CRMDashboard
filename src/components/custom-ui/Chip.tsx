@@ -8,6 +8,8 @@ export default function Chip(props: ChipProps) {
           props.theme !== "null"
             ? props.theme === "success"
               ? "bg-green-100 border border-green-400 text-green-700"
+              : props.theme === "warning"
+              ? "bg-orange-100 border border-orange-400 text-orange-700"
               : props.theme === "info"
               ? "bg-blue-100 border border-blue-400 text-blue-700"
               : props.theme === "danger"
