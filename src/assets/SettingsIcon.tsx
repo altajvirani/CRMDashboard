@@ -17,10 +17,10 @@ export default function SettingsIcon({ styles }: { styles: string }) {
           transform="translate(0 0)"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="13"
-          fill-rule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="13"
+          fillRule="evenodd"
         />
         <circle
           id="Ellipse_1"
@@ -31,9 +31,9 @@ export default function SettingsIcon({ styles }: { styles: string }) {
           transform="translate(38.741 43.073)"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="13"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="13"
         />
       </g>
     </svg>

@@ -20,9 +20,9 @@ export default function CustomButton(props: CustomButtonProps) {
             : props.theme === "ghost"
             ? "bg-gray-50 text-gray-500 border border-dashed border-gray-300"
             : props.theme === "transparent"
-            ? "bg-transparent hover:bg-gray-100 text-stone-600"
+            ? "bg-transparent hover:bg-gray-200 text-stone-600"
             : "border border-slate-300 shadow-[0rem_0rem_0.5rem_-0.1rem_rgb(98,107,128,0.2)]"
-        } min-h-[2rem] rounded-lg flex flex-row items-center transition-transform hover:scale-105 active:scale-95`}
+        } min-h-[2rem] rounded-lg flex flex-row items-center transition-all hover:scale-105 active:scale-95`}
         onClick={() => {
           props.handler !== null
             ? props.handlerParams !== null

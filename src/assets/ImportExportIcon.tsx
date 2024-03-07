@@ -17,8 +17,8 @@ export default function ImportExportIcon({ styles }: { styles: string }) {
           transform="translate(727 216.777)"
           fill="rgba(74,85,109,0.13)"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-width="7"
+          strokeLinecap="round"
+          strokeWidth="7"
         />
         <path
           id="Path_3"
@@ -27,8 +27,8 @@ export default function ImportExportIcon({ styles }: { styles: string }) {
           transform="translate(727.027 216.777)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-width="7"
+          strokeLinecap="round"
+          strokeWidth="7"
         />
         <g
           id="Group_1"

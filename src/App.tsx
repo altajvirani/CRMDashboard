@@ -38,7 +38,7 @@ function App() {
                   <input
                     ref={searchBarRef}
                     type="text"
-                    className="w-full bg-transparent border-none outline-none focus-none px-[0.35rem] placeholder-slate-400 font-qanelaslight"
+                    className="w-full bg-transparent border-none outline-none focus-none px-[0.35rem] placeholder-slate-400 font-qanelasregular"
                     placeholder="Search for..."
                   />
                 </label>

@@ -45,7 +45,7 @@ export default function DeleteIcon({ styles }: { styles: string }) {
           transform="translate(594 389)"
           fill="#707070"
           stroke="#a15151"
-          stroke-width="20">
+          strokeWidth="20">
           <rect width="334" height="29" rx="14" stroke="none" />
           <rect x="10" y="10" width="314" height="9" rx="4" fill="none" />
         </g>

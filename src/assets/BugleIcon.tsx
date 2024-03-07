@@ -13,7 +13,7 @@ export default function BugleIcon({ styles }: { styles: string }) {
           transform="translate(760 413) rotate(90)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-width="16">
+          strokeWidth="16">
           <rect width="70" height="130" rx="35" stroke="none" />
           <rect x="8" y="8" width="54" height="114" rx="27" fill="none" />
         </g>
@@ -23,7 +23,7 @@ export default function BugleIcon({ styles }: { styles: string }) {
           transform="translate(522 475)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-width="16">
+          strokeWidth="16">
           <rect width="44" height="112" rx="22" stroke="none" />
           <rect x="8" y="8" width="28" height="96" rx="14" fill="none" />
         </g>
@@ -48,7 +48,7 @@ export default function BugleIcon({ styles }: { styles: string }) {
           transform="translate(475 385)"
           fill="#e7e9ee"
           stroke="#4a556d"
-          stroke-width="16">
+          strokeWidth="16">
           <path
             d="M43,0h67a0,0,0,0,1,0,0V126a0,0,0,0,1,0,0H43A43,43,0,0,1,0,83V43A43,43,0,0,1,43,0Z"
             stroke="none"

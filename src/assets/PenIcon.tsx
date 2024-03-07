@@ -33,8 +33,8 @@ export default function PenIcon({ styles }: { styles: string }) {
           transform="translate(485.5 283.5)"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-width="20"
+          strokeLinecap="round"
+          strokeWidth="20"
         />
         <g
           id="Ellipse_1"
@@ -42,7 +42,7 @@ export default function PenIcon({ styles }: { styles: string }) {
           transform="translate(551 334)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-width="20">
+          strokeWidth="20">
           <circle cx="43" cy="43" r="43" stroke="none" />
           <circle cx="43" cy="43" r="33" fill="none" />
         </g>
@@ -52,7 +52,7 @@ export default function PenIcon({ styles }: { styles: string }) {
           transform="translate(585.5 516.917) rotate(-48.5)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-width="20">
+          strokeWidth="20">
           <rect width="206" height="52" rx="26" stroke="none" />
           <rect x="10" y="10" width="186" height="32" rx="16" fill="none" />
         </g>

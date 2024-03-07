@@ -14,7 +14,7 @@ export default function InviteIcon({ styles }: { styles: string }) {
             transform="translate(811 422)"
             fill="#d3d8e3"
             stroke="#565e70"
-            stroke-width="35">
+            strokeWidth="35">
             <path
               d="M102,0h88A102,102,0,0,1,292,102v0a66,66,0,0,1-66,66H66A66,66,0,0,1,0,102v0A102,102,0,0,1,102,0Z"
               stroke="none"
@@ -30,7 +30,7 @@ export default function InviteIcon({ styles }: { styles: string }) {
             transform="translate(881 243)"
             fill="#fff"
             stroke="#565e70"
-            stroke-width="35">
+            strokeWidth="35">
             <rect width="158" height="158" rx="79" stroke="none" />
             <rect
               x="17.5"
@@ -49,8 +49,8 @@ export default function InviteIcon({ styles }: { styles: string }) {
               transform="translate(1151.5 322)"
               fill="none"
               stroke="#565e70"
-              stroke-linecap="round"
-              stroke-width="40"
+              strokeLinecap="round"
+              strokeWidth="40"
             />
             <line
               id="Line_2"
@@ -59,8 +59,8 @@ export default function InviteIcon({ styles }: { styles: string }) {
               transform="translate(1204 374.5) rotate(90)"
               fill="none"
               stroke="#565e70"
-              stroke-linecap="round"
-              stroke-width="40"
+              strokeLinecap="round"
+              strokeWidth="40"
             />
           </g>
         </g>

@@ -15,8 +15,8 @@ export default function GridIcon({ styles }: { styles: string }) {
           transform="translate(131 90)"
           fill="#e7ebf3"
           stroke="#4a556d"
-          stroke-linejoin="bevel"
-          stroke-width="14">
+          strokeLinejoin="bevel"
+          strokeWidth="14">
           <rect width="45" height="45" rx="14" stroke="none" />
           <rect x="-7" y="-7" width="59" height="59" rx="21" fill="none" />
         </g>
@@ -26,8 +26,8 @@ export default function GridIcon({ styles }: { styles: string }) {
           transform="translate(216 90)"
           fill="#e7ebf3"
           stroke="#4a556d"
-          stroke-linejoin="bevel"
-          stroke-width="14">
+          strokeLinejoin="bevel"
+          strokeWidth="14">
           <rect width="45" height="45" rx="14" stroke="none" />
           <rect x="-7" y="-7" width="59" height="59" rx="21" fill="none" />
         </g>
@@ -37,8 +37,8 @@ export default function GridIcon({ styles }: { styles: string }) {
           transform="translate(131 175)"
           fill="#e7ebf3"
           stroke="#4a556d"
-          stroke-linejoin="bevel"
-          stroke-width="14">
+          strokeLinejoin="bevel"
+          strokeWidth="14">
           <rect width="45" height="45" rx="14" stroke="none" />
           <rect x="-7" y="-7" width="59" height="59" rx="21" fill="none" />
         </g>
@@ -48,8 +48,8 @@ export default function GridIcon({ styles }: { styles: string }) {
           transform="translate(216 175)"
           fill="#e7ebf3"
           stroke="#4a556d"
-          stroke-linejoin="bevel"
-          stroke-width="14">
+          strokeLinejoin="bevel"
+          strokeWidth="14">
           <rect width="45" height="45" rx="14" stroke="none" />
           <rect x="-7" y="-7" width="59" height="59" rx="21" fill="none" />
         </g>

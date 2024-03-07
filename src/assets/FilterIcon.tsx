@@ -14,7 +14,7 @@ export default function FilterIcon({ styles }: { styles: string }) {
           transform="translate(995 245.965)"
           fill="#65676e"
           stroke="#65676e"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           id="Layer_15-2"
@@ -23,7 +23,7 @@ export default function FilterIcon({ styles }: { styles: string }) {
           transform="translate(995 301.965)"
           fill="#65676e"
           stroke="#65676e"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           id="Layer_15-3"
@@ -32,7 +32,7 @@ export default function FilterIcon({ styles }: { styles: string }) {
           transform="translate(995 356.965)"
           fill="#65676e"
           stroke="#65676e"
-          stroke-width="5"
+          strokeWidth="5"
         />
       </g>
     </svg>

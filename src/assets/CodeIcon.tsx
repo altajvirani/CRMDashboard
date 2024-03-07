@@ -17,7 +17,7 @@ export default function CodeIcon({ styles }: { styles: string }) {
           transform="translate(489.5 345.882)"
           fill="#4a556d"
           stroke="#4a556d"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <path
           id="Path_2"
@@ -26,7 +26,7 @@ export default function CodeIcon({ styles }: { styles: string }) {
           transform="translate(539.5 345.882)"
           fill="#4a556d"
           stroke="#4a556d"
-          stroke-width="4"
+          strokeWidth="4"
         />
       </g>
     </svg>

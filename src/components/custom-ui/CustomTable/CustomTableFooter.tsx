@@ -1,6 +1,7 @@
 import AddIcon from "../../../assets/AddIcon";
 import Chip from "../Chip";
 import CustomButton from "../CustomButton";
+import CustomTableCol from "./CustomTableCol";
 
 const CountDisplay = () => {
   return (
@@ -36,27 +37,30 @@ const AddCalculation = () => {
   );
 };
 
-export default function CustomTableHeader() {
+export default function CustomTableFooter() {
+  const FooterCols = [
+    null,
+    <CountDisplay />,
+    ...Array.from({ length: 5 }, (_, i: number) => <AddCalculation key={i} />),
+    null,
+  ];
+
+  const type = "footer";
+
   return (
     <tr className="flex p-0 m-0">
-      <td className="min-w-[3.25rem] min-h-[3.2rem] flex items-center justify-end border-b border-slate-300 px-[1rem] py-[0.6rem] m-0"></td>
-      <td className="w-full min-h-[3.2rem] flex items-center justify-end overflow-y-scroll no-scrollbar border-r border-b border-slate-300 px-[1rem] py-[0.6rem] m-0 text-gray-500 font-qanelasmedium whitespace-nowrap">
-        <CountDisplay />
-      </td>
-      <td className="w-full min-h-[3.2rem] flex items-center justify-end overflow-y-scroll no-scrollbar border-r border-b border-slate-300 px-[1rem] py-[0.6rem] m-0 text-gray-500 font-qanelasmedium whitespace-nowrap">
-        <AddCalculation />
-      </td>
-      <td className="w-full min-h-[3.2rem] flex items-center justify-end overflow-y-scroll no-scrollbar border-r border-b border-slate-300 px-[1rem] py-[0.6rem] m-0 text-gray-500 font-qanelasmedium whitespace-nowrap">
-        <AddCalculation />
-      </td>
-      <td className="w-full min-h-[3.2rem] flex items-center justify-end overflow-y-scroll no-scrollbar border-r border-b border-slate-300 px-[1rem] py-[0.6rem] m-0 text-gray-500 font-qanelasmedium whitespace-nowrap">
-        <AddCalculation />
-      </td>
-      <td className="w-full min-h-[3.2rem] flex items-center justify-end overflow-y-scroll no-scrollbar border-r border-b border-slate-300 px-[1rem] py-[0.6rem] m-0 text-gray-500 font-qanelasmedium whitespace-nowrap">
-        <AddCalculation />
-      </td>
-      <td className="w-full min-h-[3.2rem] flex items-center justify-end overflow-y-scroll no-scrollbar border-r border-b border-slate-300 px-[1rem] py-[0.6rem] m-0 text-gray-500 font-qanelasmedium whitespace-nowrap"></td>
-      <td className="min-w-[4rem] min-h-[3.2rem] flex items-center justify-end border-b border-slate-300 px-[1rem] py-[0.6rem] m-0" />
+      {FooterCols.map((col: JSX.Element | null, i: number) =>
+        i === 0 || i === FooterCols.length - 1 ? (
+          <td
+            key={i}
+            className={`${
+              i == 0 ? "min-w-[3.25rem]" : "min-w-[4rem]"
+            } flex items-center justify-center border-b border-slate-300 px-[1rem] py-[0.6rem] m-0`}
+          />
+        ) : (
+          <CustomTableCol key={i} props={{ type, col: col }} />
+        )
+      )}
     </tr>
   );
 }

@@ -13,7 +13,7 @@ export default function HelpIcon({ styles }: { styles: string }) {
           transform="translate(625 422)"
           fill="rgba(211,216,227,0.73)"
           stroke="#565e70"
-          stroke-width="35">
+          strokeWidth="35">
           <circle cx="173.5" cy="173.5" r="173.5" stroke="none" />
           <circle cx="173.5" cy="173.5" r="156" fill="none" />
         </g>

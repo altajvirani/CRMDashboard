@@ -16,7 +16,7 @@ export default function ArchiveIcon({ styles }: { styles: string }) {
           transform="translate(358 197)"
           fill="rgba(215,220,232,0.5)"
           stroke="#4a556d"
-          stroke-width="32"
+          strokeWidth="32"
         />
         <rect
           id="Rectangle_1"
@@ -27,7 +27,7 @@ export default function ArchiveIcon({ styles }: { styles: string }) {
           transform="translate(327 184)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-width="32"
+          strokeWidth="32"
         />
         <rect
           id="Rectangle_3"
@@ -38,7 +38,7 @@ export default function ArchiveIcon({ styles }: { styles: string }) {
           transform="translate(437 318)"
           fill="#fff"
           stroke="#4a556d"
-          stroke-width="30"
+          strokeWidth="30"
         />
       </g>
     </svg>

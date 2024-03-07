@@ -16,9 +16,9 @@ export default function SearchIcon({ styles }: { styles: string }) {
           d="M126.78,65.64A61.14,61.14,0,1,1,65.64,4.5,61.14,61.14,0,0,1,126.78,65.64Z"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="20"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="20"
         />
         <path
           id="Path_2"
@@ -27,9 +27,9 @@ export default function SearchIcon({ styles }: { styles: string }) {
           transform="translate(83.845 83.845)"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="20"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="20"
         />
       </g>
     </svg>

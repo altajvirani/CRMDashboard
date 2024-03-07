@@ -18,7 +18,7 @@ export default function SortIcon({ styles }: { styles: string }) {
             transform="translate(7.898 0)"
             fill="#65676e"
             stroke="#65676e"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Path_2"
@@ -27,7 +27,7 @@ export default function SortIcon({ styles }: { styles: string }) {
             transform="translate(2.548 0)"
             fill="#65676e"
             stroke="#65676e"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <line
             id="Line_1"
@@ -36,9 +36,9 @@ export default function SortIcon({ styles }: { styles: string }) {
             transform="translate(20.148 4.5)"
             fill="none"
             stroke="#65676e"
-            stroke-linecap="round"
-            stroke-width="6"
-            stroke-dasharray="19 12"
+            strokeLinecap="round"
+            strokeWidth="6"
+            strokeDasharray="19 12"
           />
         </g>
         <path
@@ -48,7 +48,7 @@ export default function SortIcon({ styles }: { styles: string }) {
           transform="translate(86 80)"
           fill="#65676e"
           stroke="#65676e"
-          stroke-width="2.5"
+          strokeWidth="2.5"
         />
         <path
           id="Path_3"
@@ -57,7 +57,7 @@ export default function SortIcon({ styles }: { styles: string }) {
           transform="translate(86 111)"
           fill="#65676e"
           stroke="#65676e"
-          stroke-width="2.5"
+          strokeWidth="2.5"
         />
       </g>
     </svg>
