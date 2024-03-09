@@ -6,7 +6,7 @@ The design inspiration for this project is taken from a Dribbble shot by [V Alip
 
 ## Snapshots
 
-![image](https://user-images.githubusercontent.com/85060648/179057156-8143e9a1-1623-4b9f-b289-9f0b81d610c9.png)
+![image](https://raw.githubusercontent.com/altajvirani/CRMDashboard/main/snapshot.png)
 
 ## Getting Started
 
