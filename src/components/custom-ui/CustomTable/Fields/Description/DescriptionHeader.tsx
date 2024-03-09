@@ -1,7 +1,3 @@
 export default function DescriptionHeader() {
-  return (
-    <>
-      <span>Description</span>
-    </>
-  );
+  return <span>Description</span>;
 }

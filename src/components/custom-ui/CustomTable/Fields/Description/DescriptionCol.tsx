@@ -2,9 +2,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export default function DescriptionCol({ props }: { props: any }) {
   const { description } = props;
-  return (
-    <>
-      <span>{description}</span>
-    </>
-  );
+  return <span>{description}</span>;
 }

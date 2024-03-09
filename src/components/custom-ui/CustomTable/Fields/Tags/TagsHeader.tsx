@@ -1,7 +1,3 @@
 export default function TagsHeader() {
-  return (
-    <>
-      <span>Tags</span>
-    </>
-  );
+  return <span>Tags</span>;
 }

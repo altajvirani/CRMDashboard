@@ -19,23 +19,22 @@ export default function NextMeetingCol({ props }: { props: any }) {
     difference -= minutes * (1000 * 60);
     const seconds = Math.round(difference / 1000);
 
-    let priorityIndicator = "red";
+    let priorityIndicator = "danger";
 
     let timeString = "in ";
     if (months > 0) {
       if (years > 0) timeString += `${years} years `;
       else timeString += `${months} months `;
-      priorityIndicator = "grey";
+      priorityIndicator = "ghost";
     } else if (days > 0) {
-      timeString += `${days} days `;
-      priorityIndicator = "blue";
-    }
-    if (seconds > 0) {
+      timeString += `${days} day${days > 1 ? "s" : ""} `;
+      priorityIndicator = "info";
+    } else if (seconds > 0) {
       if (minutes > 0) {
         if (hours > 0) timeString += `${hours} hours `;
         else timeString += `${minutes} minutes `;
       } else timeString += `${seconds} seconds`;
-      priorityIndicator = "green";
+      priorityIndicator = "success";
     } else timeString = "No contact";
 
     return {
@@ -44,11 +43,13 @@ export default function NextMeetingCol({ props }: { props: any }) {
     };
   };
 
-  console.log(getTimeDifference());
+  const meetingChip = getTimeDifference();
 
   return (
-    <>
-      <Chip theme="success" content="in 30 minutes" isClickable={true} />
-    </>
+    <Chip
+      theme={meetingChip.priorityIndicator}
+      content={meetingChip.timeString}
+      isClickable={true}
+    />
   );
 }
