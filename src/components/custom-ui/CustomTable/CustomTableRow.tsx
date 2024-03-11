@@ -90,7 +90,6 @@ export default function CustomTableRow({ props }: { props: any }) {
       brandName,
       msgsCount,
       description,
-      members,
       categories,
       tags,
       nextMeetingTime,

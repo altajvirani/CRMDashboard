@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState } from "react";
 import CustomTableRow from "./CustomTableRow";
 
 export default function CustomTable() {
@@ -15,8 +14,6 @@ export default function CustomTable() {
       nextMeetingTime: new Date().getTime() + 1000 * 60 * 60 * 24 * 8,
     },
   ];
-
-  const [selectAll, setSelectAll] = useState<boolean>(false);
 
   return (
     <table className="table-fixed w-full p-0 m-0 overflow-auto">
