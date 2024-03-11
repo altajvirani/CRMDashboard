@@ -3,8 +3,8 @@ import { ChipProps } from "../../types";
 export default function Chip(props: ChipProps) {
   const { theme, isClickable, content } = props;
 
-  const themeClass = () => {
-    return theme !== null
+  const themeClass =
+    theme !== null
       ? theme === "success"
         ? "bg-green-100 border border-green-400 text-green-700"
         : theme === "info"
@@ -21,12 +21,11 @@ export default function Chip(props: ChipProps) {
         ? "bg-gray-200 border border-gray-400 text-gray-500"
         : `bg-${theme}-100 border border-${theme}-400 text-${theme}-700`
       : "";
-  };
 
   return (
     <>
       <div
-        className={`${themeClass()} px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center ${
+        className={`${themeClass} px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center ${
           isClickable
             ? "transition-transform hover:scale-105 active:scale-95 cursor-pointer"
             : ""
