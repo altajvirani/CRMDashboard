@@ -18,13 +18,12 @@ import NextMeetingHeader from "./Fields/NextMeeting/NextMeetingHeader";
 import TagsHeader from "./Fields/Tags/TagsHeader";
 
 export default function CustomTableRow({ props }: { props: any }) {
-  const rowType = props.rowType;
+  const { rowType, rowData } = props;
   let rowCols;
 
   if (rowType === "header") {
     rowCols = [
       <input
-        onChangeCapture={props.setSelectAll((prevState: boolean) => !prevState)}
         type="checkbox"
         className="checkbox checkbox-sm rounded-[0.35rem] checked:border-none border-slate-300"
       />,
@@ -47,7 +46,7 @@ export default function CustomTableRow({ props }: { props: any }) {
     const CountDisplay = () => {
       return (
         <div className="h-full flex items-center justify-end">
-          <Chip theme={"transparent"} content={"10"} isClickable={false} />
+          <Chip theme={null} content={"10"} isClickable={false} />
           <span>{`count`}</span>
         </div>
       );
@@ -95,14 +94,11 @@ export default function CustomTableRow({ props }: { props: any }) {
       categories,
       tags,
       nextMeetingTime,
-    } = props.rowData;
-
-    const { checkbox } = props.ref;
+    } = rowData;
 
     rowCols = [
       <input
         type="checkbox"
-        checked={checkbox}
         className="checkbox checkbox-sm rounded-[0.35rem] checked:border-none border-slate-300"
       />,
       <BrandCol props={{ brandName, msgsCount }} />,

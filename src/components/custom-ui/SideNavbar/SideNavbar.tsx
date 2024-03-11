@@ -17,7 +17,7 @@ export default function SideNavbar() {
     <div className="bg-white z-10 w-full sm:w-full md:w-[20rem] h-full fixed top-0 flex flex-col gap-[1rem] px-[0.75rem] py-[0.75rem]">
       <div className="w-full h-full flex flex-col border border-slate-300 rounded-xl relative">
         <Header />
-        <div className="mt-[4.5rem] flex flex-col gap-[0.4rem] p-0">
+        <div className="mt-[4.5rem] flex flex-col gap-[0.4rem] p-0 overflow-y-auto mb-[9rem]">
           <Section
             props={{
               type: "card",
