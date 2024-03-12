@@ -25,8 +25,8 @@ function App() {
   return (
     <div className="w-full h-full flex text-slate-700">
       <SideNavbar />
-      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100vh] overflow-y-auto">
-        <div className="w-full min-h-full relative overflow-hidden max-h-full border border-slate-300 rounded-xl">
+      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100dvh] overflow-y-auto">
+        <div className="w-full h-full relative overflow-hidden border border-slate-300 rounded-xl">
           <div className="w-full px-[1.3rem] py-[1rem] flex items-center justify-between gap-[0.6rem] border-b border-slate-300 ">
             <span className="font-qanelassemibold text-[1.2rem] h-full flex align-center">
               Products
@@ -136,7 +136,9 @@ function App() {
             </div>
           </div>
 
-          <CustomTable />
+          <div className="h-full overflow-auto">
+            <CustomTable />
+          </div>
 
           <div className="absolute bg-white bottom-[1.6rem] left-0 right-0 m-auto w-max h-max border border-slate-300 rounded-xl px-[0.8rem] py-[0.8rem] shadow-[0rem_0rem_1rem_-0.2rem_rgb(98,107,128,0.3)] flex items-center gap-[1.3rem]">
             <div className="flex items-center justify-center  gap-[0.35rem]">

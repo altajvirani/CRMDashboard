@@ -4,7 +4,7 @@ import CustomTableRow from "./CustomTableRow";
 
 export default function CustomTable() {
   const rowsData = [
-    {
+    ...Array.from({ length: 14 }, (_s) => ({
       brandName: "Wix",
       msgsCount: 3,
       description: "Design a personalized fitness...",
@@ -12,11 +12,11 @@ export default function CustomTable() {
       categories: ["E-Commerce", "B2B"],
       tags: ["DigitalTransformation", "OnlineShopping", "BuySellOnline"],
       nextMeetingTime: new Date().getTime() + 1000 * 60 * 60 * 24 * 8,
-    },
+    })),
   ];
 
   return (
-    <table className="table-fixed w-full p-0 m-0 overflow-auto">
+    <table className="table-auto lg:table-fixed w-full h-full mb-[15.2rem]">
       <thead>
         <CustomTableRow props={{ rowType: "header" }} />
       </thead>
