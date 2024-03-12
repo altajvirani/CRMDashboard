@@ -16,7 +16,7 @@ export default function CustomTable() {
   ];
 
   return (
-    <table className="table-auto lg:table-fixed w-full h-full mb-[15.2rem]">
+    <table className="table-auto xl:table-fixed w-full h-full mb-[15.2rem]">
       <thead>
         <CustomTableRow props={{ rowType: "header" }} />
       </thead>
