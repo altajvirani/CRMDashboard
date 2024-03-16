@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -5,22 +6,41 @@ import "./App.css";
 import SearchIcon from "./assets/SearchIcon";
 import MessagesIcon from "./assets/MessagesIcon";
 import SettingsIcon from "./assets/SettingsIcon";
-import CustomButton from "./components/custom-ui/CustomButton";
-import { useRef } from "react";
+import CustomButton from "./components/CustomButton";
+import { useRef, useState } from "react";
 import GridIcon from "./assets/GridIcon";
 import SortIcon from "./assets/SortIcon";
 import FilterIcon from "./assets/FilterIcon";
 import AddIcon from "./assets/AddIcon";
 import ImportExportIcon from "./assets/ImportExportIcon";
-import Chip from "./components/custom-ui/Chip";
-import ArchiveIcon from "./assets/ArchiveIcon";
-import DeleteIcon from "./assets/DeleteIcon";
-import CancelIcon from "./assets/CancelIcon";
-import CustomTable from "./components/custom-ui/CustomTable/CustomTable";
-import SideNavbar from "./components/custom-ui/SideNavbar/SideNavbar";
+import CustomTable from "./components/CustomTable/CustomTable";
+import SideNavbar from "./components/SideNavbar/SideNavbar";
+import RowOptions from "./components/RowOptions";
+import { TableContext } from "./context";
+import { RowData } from "./types";
 
 function App() {
   const searchBarRef = useRef<HTMLInputElement>(null);
+
+  const [rowsData, setRowsData] = useState<RowData[]>([
+    ...Array.from({ length: 14 }, (_, id) => {
+      return {
+        id,
+        brandName: "Wix",
+        msgsCount: 3,
+        description: "Design a personalized fitness...",
+        members: [1, 2, 3, 4],
+        categories: ["E-Commerce", "B2B"],
+        tags: ["DigitalTransformation", "OnlineShopping", "BuySellOnline"],
+        nextMeetingTime: new Date().getTime() + 1000 * 60 * 60 * 24 * 8,
+      } as RowData;
+    }),
+  ]);
+
+  const [selectAll, setSelectAll] = useState<boolean>(false);
+  const [selectedRowsIds, setSelectedRowsIds] = useState<number[]>([]);
+  const [rowAction, setRowAction] = useState<string | null>(null);
+  const [showRowOptions, setShowRowOptions] = useState<boolean>(false);
 
   return (
     <div className="w-full h-full flex text-slate-700">
@@ -136,54 +156,25 @@ function App() {
             </div>
           </div>
 
-          <div className="h-full overflow-auto">
-            <CustomTable />
-          </div>
+          <TableContext.Provider
+            value={{
+              rowsData,
+              setRowsData,
+              selectAll,
+              setSelectAll,
+              selectedRowsIds,
+              setSelectedRowsIds,
+              showRowOptions,
+              setShowRowOptions,
+              rowAction,
+              setRowAction,
+            }}>
+            <div className="h-full overflow-auto">
+              <CustomTable />
+            </div>
 
-          <div className="absolute bg-white bottom-[1.6rem] left-0 right-0 m-auto w-max h-max border border-slate-300 rounded-xl px-[0.8rem] py-[0.8rem] shadow-[0rem_0rem_1rem_-0.2rem_rgb(98,107,128,0.3)] flex items-center gap-[1.3rem]">
-            <div className="flex items-center justify-center  gap-[0.35rem]">
-              <Chip theme="dark" content="3" isClickable={false} />
-              <span>selected</span>
-            </div>
-            <div className="flex items-center justify-center gap-[0.6rem]">
-              <CustomButton
-                theme={null}
-                icon={
-                  <ArchiveIcon styles="w-[0.9rem] h-[0.9rem] ml-0 my-auto" />
-                }
-                text={"Archive"}
-                menuOptions={null}
-                handlerParams={null}
-                handler={null}
-              />
-              <CustomButton
-                theme="danger"
-                icon={
-                  <DeleteIcon styles="w-[0.9rem] h-[0.9rem] ml-0 my-auto" />
-                }
-                text={"Delete"}
-                menuOptions={null}
-                handlerParams={null}
-                handler={null}
-              />
-              <CustomButton
-                theme={null}
-                icon={null}
-                text={"More"}
-                menuOptions={null}
-                handlerParams={null}
-                handler={null}
-              />
-            </div>
-            <CustomButton
-              theme={"transparent"}
-              icon={<CancelIcon styles="w-[0.7rem] h-[0.7rem] m-auto" />}
-              text={null}
-              menuOptions={null}
-              handlerParams={null}
-              handler={null}
-            />
-          </div>
+            <RowOptions />
+          </TableContext.Provider>
         </div>
       </div>
     </div>

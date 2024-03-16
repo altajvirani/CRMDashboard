@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useMemo } from "react";
 import { ChipProps } from "../../types";
 
 export default function Chip(props: ChipProps) {
@@ -22,16 +24,19 @@ export default function Chip(props: ChipProps) {
         : `bg-${theme}-100 border border-${theme}-400 text-${theme}-700`
       : "";
 
-  return (
-    <>
-      <div
-        className={`${themeClass} px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center ${
-          isClickable
-            ? "transition-transform hover:scale-105 active:scale-95 cursor-pointer"
-            : ""
-        }`}>
-        {content}
-      </div>
-    </>
+  return useMemo(
+    () => (
+      <>
+        <div
+          className={`${themeClass} px-[0.4rem] min-w-max rounded-md text-[0.9rem] font-qanelasmedium flex flex-row items-center justify-center ${
+            isClickable
+              ? "transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+              : ""
+          }`}>
+          {content}
+        </div>
+      </>
+    ),
+    [content]
   );
 }

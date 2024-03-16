@@ -42,10 +42,36 @@ interface SideNavbarSectionProps {
   tabs: SideNavbarTabProps[];
 }
 
+interface ITableContext {
+  rowsData: RowData[];
+  setRowsData: React.Dispatch<React.SetStateAction<RowData[]>>;
+  selectAll: boolean;
+  setSelectAll: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedRowsIds: number[];
+  setSelectedRowsIds: React.Dispatch<React.SetStateAction<number[]>>;
+  showRowOptions: boolean;
+  setShowRowOptions: React.Dispatch<React.SetStateAction<boolean>>;
+  rowAction: string | null;
+  setRowAction: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+interface RowData {
+  id: number;
+  brandName: string;
+  msgsCount: number;
+  description: string;
+  members: number[];
+  categories: string[];
+  tags: string[];
+  nextMeetingTime: number;
+}
+
 export type {
   MenuOptionsProps,
   CustomButtonProps,
   ChipProps,
   SideNavbarTabProps,
   SideNavbarSectionProps,
+  ITableContext,
+  RowData,
 };

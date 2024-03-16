@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import NextMeetingCol from "./Fields/NextMeeting/NextMeetingCol";
@@ -16,16 +18,75 @@ import DescriptionHeader from "./Fields/Description/DescriptionHeader";
 import MembersHeader from "./Fields/Members/MembersHeader";
 import NextMeetingHeader from "./Fields/NextMeeting/NextMeetingHeader";
 import TagsHeader from "./Fields/Tags/TagsHeader";
+import { useContext, useEffect, useState } from "react";
+import { TableContext } from "../../../context";
+import { RowData } from "../../../types";
 
 export default function CustomTableRow({ props }: { props: any }) {
-  const { rowType, rowData } = props;
+  const { rowType, rowData }: { rowType: string; rowData: RowData } = props;
   let rowCols;
+
+  const {
+    setRowsData,
+    selectAll,
+    setSelectAll,
+    selectedRowsIds,
+    setSelectedRowsIds,
+    rowAction,
+    setRowAction,
+  } = useContext(TableContext) as {
+    setRowsData: React.Dispatch<React.SetStateAction<RowData[]>>;
+    selectAll: boolean;
+    setSelectAll: React.Dispatch<React.SetStateAction<boolean>>;
+    selectedRowsIds: number[];
+    setSelectedRowsIds: React.Dispatch<React.SetStateAction<number[]>>;
+    rowAction: string | null;
+    setRowAction: React.Dispatch<React.SetStateAction<string | null>>;
+  };
+
+  const [selectCurr, setSelectCurr] = useState<boolean>(false);
+
+  useEffect(() => {
+    setSelectCurr(selectAll);
+  }, [selectAll]);
+
+  useEffect(() => {
+    if (rowData) {
+      if (selectCurr)
+        setSelectedRowsIds((prevState: number[]) =>
+          !prevState.includes(rowData.id)
+            ? [...prevState, rowData.id]
+            : prevState
+        );
+      else
+        setSelectedRowsIds((prevState: number[]) =>
+          prevState.filter((rowId) => rowId !== rowData.id)
+        );
+    }
+  }, [selectCurr]);
+
+  const deleteRow = () => {
+    setSelectCurr(false);
+    setRowsData((prevState: RowData[]) =>
+      prevState.filter((row: RowData) => !selectedRowsIds.includes(row.id))
+    );
+    setSelectedRowsIds([]);
+  };
+
+  useEffect(() => {
+    if (rowAction) {
+      if (rowAction === "delete") deleteRow();
+      setRowAction(null);
+    }
+  }, [rowAction]);
 
   if (rowType === "header") {
     rowCols = [
       <input
         type="checkbox"
-        className="checkbox checkbox-sm rounded-[0.35rem] checked:border-none border-slate-300"
+        checked={selectAll}
+        onChange={() => setSelectAll((prevState: boolean) => !prevState)}
+        className="checkbox checkbox-sm rounded-[0.35rem] outline-none focus:outline-none active:outline-none checked:border-none border-slate-300"
       />,
       <BrandHeader />,
       <DescriptionHeader />,
@@ -87,18 +148,23 @@ export default function CustomTableRow({ props }: { props: any }) {
     ];
   } else {
     const {
+      // id,
       brandName,
       msgsCount,
       description,
+      // members,
       categories,
       tags,
       nextMeetingTime,
-    } = rowData;
+    }: RowData = rowData;
 
     rowCols = [
       <input
+        key={rowData.id}
         type="checkbox"
-        className="checkbox checkbox-sm rounded-[0.35rem] checked:border-none border-slate-300"
+        checked={selectCurr}
+        onChange={() => setSelectCurr((prevState: boolean) => !prevState)}
+        className="checkbox checkbox-sm rounded-[0.35rem] outline-none focus:outline-none active:outline-none checked:border-none border-slate-300"
       />,
       <BrandCol props={{ brandName, msgsCount }} />,
       <DescriptionCol props={{ description }} />,
@@ -124,9 +190,8 @@ export default function CustomTableRow({ props }: { props: any }) {
 
   return (
     <tr
-      className={`flex p-0 m-0 w-full ${
-        rowType === "row" &&
-        "hover:bg-slate-100 cursor-pointer transition-colors"
+      className={`flex p-0 m-0 w-full cursor-pointer ${
+        rowType === "row" && "hover:bg-slate-100 transition-colors"
       }`}>
       {rowCols.map((col: JSX.Element | null, i: number) =>
         i === 0 || i === rowCols.length - 1 ? (
