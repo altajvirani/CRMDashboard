@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useMemo } from "react";
-import { ChipProps } from "../../types";
+import { ChipProps } from "../types";
 
 export default function Chip(props: ChipProps) {
   const { theme, isClickable, content } = props;

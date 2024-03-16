@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { SideNavbarSectionProps, SideNavbarTabProps } from "../../../types";
+import { SideNavbarSectionProps, SideNavbarTabProps } from "../../types";
 import Tab from "./Tab";
 
 export default function Section({ props }: { props: SideNavbarSectionProps }) {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import CustomButton from "../../../CustomButton";
-import MessagesIcon from "../../../../../assets/MessagesIcon";
+import MessagesIcon from "../../../../assets/MessagesIcon";
 
 export default function BrandCol({ props }: { props: any }) {
   const { brandName, msgsCount } = props;

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { SideNavbarTabProps } from "../../../types";
+import { SideNavbarTabProps } from "../../types";
 
 export default function Tab({ props }: { props: SideNavbarTabProps }) {
   const {

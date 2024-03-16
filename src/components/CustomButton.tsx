@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { CustomButtonProps } from "../../types";
+import { CustomButtonProps } from "../types";
 
 export default function CustomButton(props: CustomButtonProps) {
   return (

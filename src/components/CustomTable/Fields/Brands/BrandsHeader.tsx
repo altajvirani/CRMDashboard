@@ -1,5 +1,5 @@
 import CustomButton from "../../../CustomButton";
-import AddIcon from "../../../../../assets/AddIcon";
+import AddIcon from "../../../../assets/AddIcon";
 
 export default function BrandHeader() {
   return (

@@ -9,7 +9,7 @@ import MembersCol from "./Fields/Members/MembersCol";
 import TagsCol from "./Fields/Tags/TagsCol";
 import BrandCol from "./Fields/Brands/BrandCol";
 import CustomTableCol from "./CustomTableCol";
-import AddIcon from "../../../assets/AddIcon";
+import AddIcon from "../../assets/AddIcon";
 import Chip from "../Chip";
 import CustomButton from "../CustomButton";
 import BrandHeader from "./Fields/Brands/BrandsHeader";
@@ -19,8 +19,8 @@ import MembersHeader from "./Fields/Members/MembersHeader";
 import NextMeetingHeader from "./Fields/NextMeeting/NextMeetingHeader";
 import TagsHeader from "./Fields/Tags/TagsHeader";
 import { useContext, useEffect, useState } from "react";
-import { TableContext } from "../../../context";
-import { RowData } from "../../../types";
+import { TableContext } from "../../context";
+import { RowData } from "../../types";
 
 export default function CustomTableRow({ props }: { props: any }) {
   const { rowType, rowData }: { rowType: string; rowData: RowData } = props;

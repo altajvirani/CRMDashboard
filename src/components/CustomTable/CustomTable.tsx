@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { TableContext } from "../../../context";
-import { RowData } from "../../../types";
+import { TableContext } from "../../context";
+import { RowData } from "../../types";
 import CustomTableRow from "./CustomTableRow";
 
 export default function CustomTable() {
