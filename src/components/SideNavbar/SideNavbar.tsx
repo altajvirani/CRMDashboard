@@ -250,7 +250,7 @@ export default function SideNavbar({ props }: { props: any }) {
         )}
       </div>
       <div
-        className="absolute top-0 right-1 mt-[68vh] mr-[0.5rem] md:mr-[-0.9rem] bg-white border border-slate-300 rounded-tl-lg rounded-bl-lg  md:rounded-tl-none md:rounded-bl-none md:rounded-tr-lg md:rounded-br-lg cursor-pointer transition-all hover:scale-[1.2] active:scale-[1] hover:translate-x-[-0.15rem] active:translate-x-0 md:hover:translate-x-[0.15rem] md:active:translate-x-0 md:-z-10"
+        className="absolute bottom-0 right-1 mb-[25vh] mr-[0.5rem] md:mr-[-0.9rem] bg-white border border-slate-300 rounded-tl-lg rounded-bl-lg  md:rounded-tl-none md:rounded-bl-none md:rounded-tr-lg md:rounded-br-lg cursor-pointer transition-all hover:scale-[1.2] active:scale-[1] hover:translate-x-[-0.15rem] active:translate-x-0 md:hover:translate-x-[0.15rem] md:active:translate-x-0 md:-z-10"
         onClick={() => setToggleNavbar((prevState: boolean) => !prevState)}>
         <ArrowIcon
           styles={`w-[0.7rem] h-[0.7rem] ml-[0.35rem] mr-[0.3rem] my-4 ${
