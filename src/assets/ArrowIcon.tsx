@@ -18,8 +18,8 @@ export default function ArrowIcon({ styles }: { styles: string }) {
           transform="translate(634.5 343.5)"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-width="25"
+          strokeLinecap="round"
+          strokeWidth="25"
         />
         <line
           id="Line_2"
@@ -29,8 +29,8 @@ export default function ArrowIcon({ styles }: { styles: string }) {
           transform="translate(634.5 411.364)"
           fill="none"
           stroke="#4a556d"
-          stroke-linecap="round"
-          stroke-width="25"
+          strokeLinecap="round"
+          strokeWidth="25"
         />
       </g>
     </svg>
