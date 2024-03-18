@@ -23,8 +23,8 @@ export default function SideNavbar({ props }: { props: any }) {
         toggleNavbar && "w-full sm:w-full md:w-[20rem]"
       } h-full fixed top-0 flex gap-[1rem] px-[0.75rem] py-[0.75rem]`}>
       <div
-        className={`w-full h-full flex flex-col bg-white border border-slate-300 rounded-xl relative ${
-          !toggleNavbar && "p-[0.8rem] w-[3.65rem]"
+        className={`h-full flex flex-col bg-white border border-slate-300 rounded-xl relative ${
+          toggleNavbar ? "w-full" : "p-[0.8rem] w-[3.65rem]"
         }`}>
         {toggleNavbar && (
           <>
