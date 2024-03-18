@@ -190,8 +190,11 @@ export default function CustomTableRow({ props }: { props: any }) {
 
   return (
     <tr
-      className={`flex p-0 m-0 w-full cursor-pointer ${
-        rowType === "row" && "hover:bg-slate-100 transition-colors"
+      className={`flex p-0 m-0 w-full cursor-pointer transition-colors ${
+        rowType === "row" &&
+        (selectedRowsIds.includes(rowData.id)
+          ? "bg-slate-100"
+          : "hover:bg-slate-100")
       }`}>
       {rowCols.map((col: JSX.Element | null, i: number) =>
         i === 0 || i === rowCols.length - 1 ? (

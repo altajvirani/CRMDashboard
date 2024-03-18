@@ -55,7 +55,7 @@ export default function RowOptions() {
             theme={null}
             icon={null}
             text={"More"}
-            menuOptions={null}
+            menuOptions={[]}
             handlerParams={null}
             handler={null}
           />

@@ -13,7 +13,7 @@ interface CustomButtonProps {
   theme: string | null;
   icon: JSX.Element | null;
   text: string | null;
-  menuOptions: MenuOptionsProps | null;
+  menuOptions: MenuOptionsProps[] | null;
   handlerParams: any[] | null;
   handler: ((...args: any) => any) | null;
 }

@@ -20,6 +20,8 @@ import { TableContext } from "./context";
 import { RowData } from "./types";
 
 function App() {
+  const [toggleNavbar, setToggleNavbar] = useState<boolean>(false);
+
   const searchBarRef = useRef<HTMLInputElement>(null);
 
   const [rowsData, setRowsData] = useState<RowData[]>([
@@ -44,10 +46,13 @@ function App() {
 
   return (
     <div className="w-full h-full flex text-slate-700">
-      <SideNavbar />
-      <div className="w-full pl-[0.75rem] md:pl-[20rem] pr-[0.75rem] py-[0.75rem] h-[100dvh] overflow-y-auto">
+      <SideNavbar props={{ toggleNavbar, setToggleNavbar }} />
+      <div
+        className={`w-full ${
+          toggleNavbar ? "pl-[0.75rem] md:pl-[20rem]" : "pl-[5.2rem]"
+        } pr-[0.75rem] py-[0.75rem] h-[100dvh] overflow-hidden`}>
         <div className="w-full h-full relative overflow-hidden border border-slate-300 rounded-xl">
-          <div className="w-full px-[1.3rem] py-[1rem] flex items-center justify-between gap-[0.6rem] border-b border-slate-300 ">
+          <div className="w-full px-[1.3rem] py-[1rem] flex items-center justify-between gap-[0.6rem] border-b border-slate-300">
             <span className="font-qanelassemibold text-[1.2rem] h-full flex align-center">
               Products
             </span>
@@ -92,7 +97,7 @@ function App() {
                 theme={null}
                 icon={<GridIcon styles="w-[0.8rem] h-[0.8rem] m-auto" />}
                 text="All brands"
-                menuOptions={null}
+                menuOptions={[]}
                 handler={null}
                 handlerParams={null}
               />
@@ -100,7 +105,7 @@ function App() {
                 theme={null}
                 icon={null}
                 text="Desk"
-                menuOptions={null}
+                menuOptions={[]}
                 handler={null}
                 handlerParams={null}
               />
@@ -108,7 +113,7 @@ function App() {
                 theme={null}
                 icon={null}
                 text="Tags"
-                menuOptions={null}
+                menuOptions={[]}
                 handler={null}
                 handlerParams={null}
               />
@@ -172,7 +177,6 @@ function App() {
             <div className="h-full overflow-auto">
               <CustomTable />
             </div>
-
             <RowOptions />
           </TableContext.Provider>
         </div>
