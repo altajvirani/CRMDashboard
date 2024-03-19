@@ -77,7 +77,7 @@ function App() {
                   />
                 }
                 text={null}
-                menuOptions={null}
+                menuProps={null}
                 handler={null}
                 handlerParams={null}
               />
@@ -85,7 +85,7 @@ function App() {
                 theme={null}
                 icon={<SettingsIcon styles="w-[1.2rem] h-[1.2rem] m-auto" />}
                 text={null}
-                menuOptions={null}
+                menuProps={null}
                 handler={null}
                 handlerParams={null}
               />
@@ -97,7 +97,12 @@ function App() {
                 theme={null}
                 icon={<GridIcon styles="w-[0.8rem] h-[0.8rem] m-auto" />}
                 text="All brands"
-                menuOptions={[]}
+                menuProps={{
+                  position: "bottom-start",
+                  menuOptions: [],
+                  handlerParams: null,
+                  handler: null,
+                }}
                 handler={null}
                 handlerParams={null}
               />
@@ -105,7 +110,12 @@ function App() {
                 theme={null}
                 icon={null}
                 text="Desk"
-                menuOptions={[]}
+                menuProps={{
+                  position: "bottom-start",
+                  menuOptions: [],
+                  handlerParams: null,
+                  handler: null,
+                }}
                 handler={null}
                 handlerParams={null}
               />
@@ -113,7 +123,12 @@ function App() {
                 theme={null}
                 icon={null}
                 text="Tags"
-                menuOptions={[]}
+                menuProps={{
+                  position: "bottom-start",
+                  menuOptions: [],
+                  handlerParams: null,
+                  handler: null,
+                }}
                 handler={null}
                 handlerParams={null}
               />
@@ -121,7 +136,7 @@ function App() {
                 theme="ghost"
                 icon={<SortIcon styles="w-[0.85rem] h-[0.85rem] m-auto" />}
                 text="Sort"
-                menuOptions={null}
+                menuProps={null}
                 handler={null}
                 handlerParams={null}
               />
@@ -129,7 +144,7 @@ function App() {
                 theme="ghost"
                 icon={<FilterIcon styles="w-[0.95rem] h-[0.95rem] m-auto" />}
                 text="Filter"
-                menuOptions={null}
+                menuProps={null}
                 handler={null}
                 handlerParams={null}
               />
@@ -144,7 +159,7 @@ function App() {
                   />
                 }
                 text="Meeting"
-                menuOptions={null}
+                menuProps={null}
                 handler={null}
                 handlerParams={null}
               />
@@ -154,7 +169,7 @@ function App() {
                   <ImportExportIcon styles="w-[1rem] h-[1rem] my-[0.2rem]" />
                 }
                 text="Import/Export"
-                menuOptions={null}
+                menuProps={null}
                 handler={null}
                 handlerParams={null}
               />

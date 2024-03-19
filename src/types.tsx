@@ -2,8 +2,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+interface MenuProps {
+  position: string | null;
+  menuOptions: MenuOptionsProps[];
+  handlerParams: any[] | null;
+  handler: ((...args: any) => any) | null;
+}
+
 interface MenuOptionsProps {
   text: string;
+  checkbox: boolean;
   icon: React.ReactNode | null;
   handlerParams: any[] | null;
   handler: ((...args: any) => any) | null;
@@ -13,7 +21,7 @@ interface CustomButtonProps {
   theme: string | null;
   icon: JSX.Element | null;
   text: string | null;
-  menuOptions: MenuOptionsProps[] | null;
+  menuProps: MenuProps | null;
   handlerParams: any[] | null;
   handler: ((...args: any) => any) | null;
 }

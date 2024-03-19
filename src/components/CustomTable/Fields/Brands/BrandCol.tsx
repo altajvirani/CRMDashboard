@@ -25,7 +25,7 @@ export default function BrandCol({ props }: { props: any }) {
             />
           }
           text={msgsCount}
-          menuOptions={null}
+          menuProps={null}
           handlerParams={null}
           handler={null}
         />

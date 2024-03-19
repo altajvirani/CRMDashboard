@@ -145,7 +145,7 @@ export default function SideNavbar({ props }: { props: any }) {
                             />
                           }
                           text={null}
-                          menuOptions={null}
+                          menuProps={null}
                           handlerParams={null}
                           handler={null}
                         />

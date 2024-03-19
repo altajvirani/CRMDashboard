@@ -39,7 +39,7 @@ export default function RowOptions() {
             theme={null}
             icon={<ArchiveIcon styles="w-[0.9rem] h-[0.9rem] ml-0 my-auto" />}
             text={"Archive"}
-            menuOptions={null}
+            menuProps={null}
             handlerParams={null}
             handler={() => setRowAction("archive")}
           />
@@ -47,7 +47,7 @@ export default function RowOptions() {
             theme="danger"
             icon={<DeleteIcon styles="w-[0.9rem] h-[0.9rem] ml-0 my-auto" />}
             text={"Delete"}
-            menuOptions={null}
+            menuProps={null}
             handlerParams={null}
             handler={() => setRowAction("delete")}
           />
@@ -55,7 +55,12 @@ export default function RowOptions() {
             theme={null}
             icon={null}
             text={"More"}
-            menuOptions={[]}
+            menuProps={{
+              position: "top-center",
+              menuOptions: [],
+              handlerParams: null,
+              handler: null,
+            }}
             handlerParams={null}
             handler={null}
           />
@@ -64,7 +69,7 @@ export default function RowOptions() {
           theme={"transparent"}
           icon={<CancelIcon styles="w-[0.7rem] h-[0.7rem] m-auto" />}
           text={null}
-          menuOptions={null}
+          menuProps={null}
           handlerParams={null}
           handler={() => setShowRowOptions(false)}
         />
