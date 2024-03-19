@@ -75,6 +75,7 @@ interface RowData {
 }
 
 export type {
+  MenuProps,
   MenuOptionsProps,
   CustomButtonProps,
   ChipProps,
