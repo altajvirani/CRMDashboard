@@ -1,6 +1,6 @@
 # CRMDashboard
 
-CRMDashboard is a template for a CRM (Customer Relationship Management) dashboard built for educational purposes, as part of an assessment to test ReactJS and TailwindCSS skills. It aims to provide a customizable and user-friendly dashboard solution for managing customer relationship data.
+CRMDashboard is a template for a CRM (Customer Relationship Management) dashboard which aims to provide a customizable and user-friendly dashboard solution for managing customer relationship data.
 
 The design inspiration for this project is taken from a Dribbble shot by [V Alipov](https://dribbble.com/alipov) ([View Dribbble Shot](https://dribbble.com/shots/23465580-CRM-Saas-Innovate-Hub)).
 
@@ -60,7 +60,3 @@ To run the project using Vite, follow these steps:
    ```
 
    This will display the CRMDashboard application running locally on your machine.
-
-## Contributing
-
-Contributions to CRMDashboard are welcome! If you find any bugs or have suggestions for improvements, please submit an issue or pull request on the GitHub repository.
