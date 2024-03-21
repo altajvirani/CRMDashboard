@@ -51,8 +51,8 @@ interface SideNavbarSectionProps {
 }
 
 interface ITableContext {
-  rowsData: RowData[];
-  setRowsData: React.Dispatch<React.SetStateAction<RowData[]>>;
+  tableData: TableData[];
+  setTableData: React.Dispatch<React.SetStateAction<TableData[]>>;
   selectAll: boolean;
   setSelectAll: React.Dispatch<React.SetStateAction<boolean>>;
   selectedRowsIds: number[];
@@ -63,7 +63,7 @@ interface ITableContext {
   setRowAction: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-interface RowData {
+interface TableData {
   id: number;
   brandName: string;
   msgsCount: number;
@@ -82,5 +82,5 @@ export type {
   SideNavbarTabProps,
   SideNavbarSectionProps,
   ITableContext,
-  RowData,
+  TableData,
 };

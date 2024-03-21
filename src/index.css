@@ -3,21 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Qanelas-Thin";
-  src: url("./fonts/qanelas/QanelasThin.woff");
-}
-
-@font-face {
-  font-family: "Qanelas-Ultra-Light";
-  src: url("./fonts/qanelas/QanelasUltraLight.woff");
-}
-
-@font-face {
-  font-family: "Qanelas-Light";
-  src: url("./fonts/qanelas/QanelasLight.woff");
-}
-
-@font-face {
   font-family: "Qanelas-Regular";
   src: url("./fonts/qanelas/QanelasRegular.woff");
 }
@@ -32,34 +17,13 @@
   src: url("./fonts/qanelas/QanelasSemiBold.woff");
 }
 
-@font-face {
-  font-family: "Qanelas-Bold";
-  src: url("./fonts/qanelas/QanelasBold.woff");
-}
-
-@font-face {
-  font-family: "Qanelas-Extra-Bold";
-  src: url("./fonts/qanelas/QanelasExtraBold.woff");
-}
-
-@font-face {
-  font-family: "Qanelas-Black";
-  src: url("./fonts/qanelas/QanelasBlack.woff");
-}
-
-@font-face {
-  font-family: "Qanelas-Heavy";
-  src: url("./fonts/qanelas/QanelasHeavy.woff");
-}
-
 @layer utilities {
-  /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

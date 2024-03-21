@@ -17,14 +17,14 @@ import CustomTable from "./components/CustomTable/CustomTable";
 import SideNavbar from "./components/SideNavbar/SideNavbar";
 import RowOptions from "./components/RowOptions";
 import { TableContext } from "./context";
-import { RowData } from "./types";
+import { TableData } from "./types";
 
 function App() {
   const [toggleNavbar, setToggleNavbar] = useState<boolean>(false);
 
   const searchBarRef = useRef<HTMLInputElement>(null);
 
-  const [rowsData, setRowsData] = useState<RowData[]>([
+  const [tableData, setTableData] = useState<TableData[]>([
     ...Array.from({ length: 14 }, (_, id) => {
       return {
         id,
@@ -35,7 +35,7 @@ function App() {
         categories: ["E-Commerce", "B2B"],
         tags: ["DigitalTransformation", "OnlineShopping", "BuySellOnline"],
         nextMeetingTime: new Date().getTime() + 1000 * 60 * 60 * 24 * 8,
-      } as RowData;
+      } as TableData;
     }),
   ]);
 
@@ -178,8 +178,8 @@ function App() {
 
           <TableContext.Provider
             value={{
-              rowsData,
-              setRowsData,
+              tableData,
+              setTableData,
               selectAll,
               setSelectAll,
               selectedRowsIds,

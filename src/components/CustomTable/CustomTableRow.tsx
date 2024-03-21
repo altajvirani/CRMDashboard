@@ -20,14 +20,14 @@ import NextMeetingHeader from "./Fields/NextMeeting/NextMeetingHeader";
 import TagsHeader from "./Fields/Tags/TagsHeader";
 import { useContext, useEffect, useState } from "react";
 import { TableContext } from "../../context";
-import { RowData } from "../../types";
+import { TableData } from "../../types";
 
 export default function CustomTableRow({ props }: { props: any }) {
-  const { rowType, rowData }: { rowType: string; rowData: RowData } = props;
+  const { rowType, rowData }: { rowType: string; rowData: TableData } = props;
   let rowCols;
 
   const {
-    setRowsData,
+    setTableData,
     selectAll,
     setSelectAll,
     selectedRowsIds,
@@ -35,7 +35,7 @@ export default function CustomTableRow({ props }: { props: any }) {
     rowAction,
     setRowAction,
   } = useContext(TableContext) as {
-    setRowsData: React.Dispatch<React.SetStateAction<RowData[]>>;
+    setTableData: React.Dispatch<React.SetStateAction<TableData[]>>;
     selectAll: boolean;
     setSelectAll: React.Dispatch<React.SetStateAction<boolean>>;
     selectedRowsIds: number[];
@@ -67,8 +67,8 @@ export default function CustomTableRow({ props }: { props: any }) {
 
   const deleteRow = () => {
     setSelectCurr(false);
-    setRowsData((prevState: RowData[]) =>
-      prevState.filter((row: RowData) => !selectedRowsIds.includes(row.id))
+    setTableData((prevState: TableData[]) =>
+      prevState.filter((row: TableData) => !selectedRowsIds.includes(row.id))
     );
     setSelectedRowsIds([]);
   };
@@ -156,7 +156,7 @@ export default function CustomTableRow({ props }: { props: any }) {
       categories,
       tags,
       nextMeetingTime,
-    }: RowData = rowData;
+    }: TableData = rowData;
 
     rowCols = [
       <input
